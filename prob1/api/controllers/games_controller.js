@@ -38,10 +38,6 @@ module.exports.getGames = function(req, res) {
 }
 
 module.exports.getGame = function(req, res) {
-  const response = {
-    status: 200,
-    message: {}
-  }
   const gameId = req.params.gameId;
 
   Game.findById(gameId).exec(function(err, game) {
